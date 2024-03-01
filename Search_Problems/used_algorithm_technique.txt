@@ -1,0 +1,35 @@
+#for BFS, DFS
+def tree_search(problem):    
+    initialize frontier as specific work list # (stack, queue, priority queue)  
+    add initial state of problem to frontier  
+  
+    while frontier not empty:  
+        choose a node and remove it from frontier  
+  
+        if node contains goal state:  
+            return the corresponding solution  
+  
+        for each resulting child from node:  
+            add child to frontier  
+  
+    return failure  
+
+# for UCS, Greedy Best First Search, and A*
+def graph_search(problem):    
+    initialize the explored set to be empty  
+    initialize frontier as specific work list # (stack, queue, priority queue)  
+    add intial state of problem to frontier  
+  
+    while frontier not empty:  
+        choose a node and remove it from frontier  
+  
+        if node contains goal state:  
+            return the corresponding solution  
+  
+        add node to explored set  
+  
+        for each resulting child from node:  
+            if child state not in frontier and child state not in explored set:  
+                add child to the frontier  
+  
+    return failure 
